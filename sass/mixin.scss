@@ -1,0 +1,10 @@
+@mixin border-solid-yellow($margin: 3px, $solid: solid, $color: yellow) {
+    border: $margin $solid $color;
+}
+@mixin font-size($size: 3px) {
+    font-size: $size
+}
+
+@mixin transition($value: 0.3s, $anim:ease-in-out, $all:all) {
+    transition: $value $anim $all;
+}

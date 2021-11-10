@@ -1,0 +1,21 @@
+/*Vars*/
+$white: #ffffff;
+$langages: HTML5, CSS3,JAVA, React;
+$length: length($langages);
+
+
+@function getFirst(){
+    /* nth($list: $langages, $n: 1)*/
+    @return nth($langages , 0 )
+}
+
+@function getLast(){
+    @return nth($langages , $length )
+}
+
+@function background($color){
+@if ($color != $white) {
+    @return $white;
+}
+@return #000000;
+}
