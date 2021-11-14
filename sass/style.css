@@ -2,6 +2,7 @@
 /*Vars*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
 /*vars*/
+/*device sizes*/
 /* grey */
 /* fonts  */
 /* transitions */
@@ -55,6 +56,11 @@ ul {
   object-fit: cover;
 }
 
+/*
+________________________
+Buttons
+________________________
+*/
 .btn {
   cursor: pointer;
   color: #ffffff;
@@ -67,7 +73,148 @@ ul {
   text-transform: capitalize;
   display: inline-block;
 }
+.btn:hover {
+  color: yellow;
+}
 
+/*
+________________________
+Positions
+________________________
+*/
+.container {
+  height: 400px;
+  width: 90vw;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  position: inherit;
+}
+
+.item {
+  height: 150px;
+  width: 150px;
+}
+
+.item1 {
+  background-color: #ffbee1;
+  position: sticky;
+  top: 100px;
+  left: 50px;
+}
+
+.item2 {
+  background-color: #83cce9;
+}
+
+/*
+________________________
+Units
+________________________
+*/
+.box {
+  border: 1px solid var(--grey-900);
+  height: auto;
+  margin: 10px;
+  background-color: var(--primary-300);
+}
+
+.box__parent {
+  width: 50%;
+}
+
+.box__pixels {
+  width: 200px;
+}
+
+.box__container {
+  height: auto;
+  margin: 10px;
+  width: 70%;
+}
+
+.font__container {
+  height: auto;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.font__1em {
+  font-size: 1em;
+}
+
+.font__1rem {
+  font-size: 1rem;
+}
+
+.font__100percent {
+  font-size: 100%;
+}
+
+.font__2em {
+  font-size: 2em;
+}
+
+.font__2rem {
+  font-size: 2em;
+}
+
+.font__200percent {
+  font-size: 200%;
+}
+
+/*
+________________________
+Flex
+________________________
+*/
+.flex__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+Media Queries
+________________________
+*/
+.media__container {
+  height: 20vh;
+  width: 90vw;
+  margin-bottom: 50px;
+  background-color: #ffe0e0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+  .media__container {
+    background-color: #ffe0e0;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+  .media__container {
+    background-color: #ffbebe;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .media__container {
+    background-color: #ff7d7d;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .media__container {
+    background-color: #cc4a4a;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  .media__container {
+    background-color: #662525;
+  }
+}
 /*body{
     background-color: $background-color;
 }*/

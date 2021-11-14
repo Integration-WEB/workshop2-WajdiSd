@@ -8,3 +8,15 @@
 @mixin transition($value: 0.3s, $anim:ease-in-out, $all:all) {
     transition: $value $anim $all;
 }
+
+@mixin box-width($value) {
+    width: $value;
+}
+
+@mixin font-size($value) {
+    font-size : $value
+}
+
+@mixin media-background-color($value) {
+    background-color: $value
+}

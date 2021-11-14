@@ -4,6 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
 
 /*vars*/
+
+/*device sizes*/
+$small-devices: 600px;
+$medium-devices: 768px;
+$large-devices: 992px;
+$extra-large-devices: 1200px;
+
+
+
+
 $background-color:#000000;
 
 $primary-100: #ffe0e0;
@@ -80,6 +90,12 @@ ul {
     object-fit: cover;
 }
 
+/*
+________________________
+Buttons
+________________________
+*/
+
 .btn {
     cursor: pointer;
     color:$white;
@@ -91,7 +107,157 @@ ul {
     @include transition();
     text-transform: capitalize;
     display: inline-block;
+    &:hover {
+        color:yellow;
+    }
 }
+
+/*
+________________________
+Positions
+________________________
+*/
+
+.container {
+    height: 400px;
+    width: 90vw;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    position: inherit;
+}
+
+.item {
+    height: 150px;
+    width: 150px;
+}
+
+@for $i from 1 through 2{
+    .item#{$i}{
+        @if($i ==1){
+            background-color: rgb(255, 190, 225);
+            position: sticky;
+            top: 100px;
+            left: 50px;
+        }@else{
+            background-color: rgb(131, 204, 233)
+
+        }
+    }
+}
+
+
+/*
+________________________
+Units
+________________________
+*/
+
+.box {
+    border: 1px solid var(--grey-900);
+    height: auto;
+    margin: 10px;
+    background-color: var(--primary-300);
+}
+
+.box__parent {
+    @include box-width(50%)
+}
+
+.box__pixels {
+    @include box-width(200px)
+}
+
+.box__container {
+    height: auto;
+    margin: 10px;
+    @include box-width(70%)
+}
+
+.font__container {
+    height: auto;
+    margin: 10px;
+    @include font-size(25px);
+}
+
+.font__1em {
+    @include font-size(1em);
+}
+.font__1rem {
+    @include font-size(1rem);
+}
+.font__100percent {
+    @include font-size(100%);
+}
+.font__2em {
+    @include font-size(2em);
+}
+.font__2rem {
+    @include font-size(2em);
+}
+.font__200percent {
+    @include font-size(200%);
+}
+
+/*
+________________________
+Flex
+________________________
+*/
+.flex__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+Media Queries
+________________________
+*/
+    .media__container {
+        height: 20vh;
+        width: 90vw;
+        margin-bottom: 50px;
+        @include media-background-color($primary-100);
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+
+    @media screen and (max-width : $small-devices){
+        .media__container {
+            @include media-background-color($primary-100);
+        }   
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media screen and (min-width : $small-devices){
+        .media__container {
+            @include media-background-color($primary-200);
+        }   
+    }
+
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media screen and (min-width : $medium-devices){
+        .media__container {
+            @include media-background-color($primary-400);
+        }   
+    }
+
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media screen and (min-width : $large-devices){
+        .media__container {
+            @include media-background-color($primary-600);
+        }   
+    }
+
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media screen and (min-width : $extra-large-devices){
+        .media__container {
+            @include media-background-color($primary-800);
+        }   
+    }
 
 
 
